@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SmartTempMonApp.Pages.DashboardPage"
+             Title="Home"
+             BackgroundColor="White">
+    <ScrollView>
+    <VerticalStackLayout Spacing="20" Padding="30" VerticalOptions="FillAndExpand">
+
+        
+        <Label Text="SMART TEMPERATURE MONITORING APP" 
+               FontSize="28" 
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               TextColor="Black"/>
+
+
+            <FlexLayout Direction="Row"
+            JustifyContent="Center"
+            AlignItems="Center"
+            Wrap="Wrap">
+                <!-- Add Staff Button -->
+                <Button x:Name="AddStaffButton"
+            Text="Add Staff"
+            IsVisible="False"
+            Clicked="AddStaffButton_Clicked"
+            BackgroundColor="#4285F4"
+            TextColor="White"
+            FontSize="16"
+            CornerRadius="10"
+            HeightRequest="40"
+            WidthRequest="120"
+            Margin="5" />
+                <!-- Add Margin for spacing -->
+
+                <!-- Add A Report Button -->
+                <Button Text="Add A Report"
+            Clicked="OnAddReportClicked"
+            BackgroundColor="#4285F4"
+            TextColor="White"
+            FontSize="16"
+            CornerRadius="10"
+            HeightRequest="40"
+            WidthRequest="200"
+            Margin="5" />
+                <!-- Add Margin for spacing -->
+
+                <!-- View All Reports Button -->
+               
+                <!-- Add Margin for spacing -->
+            </FlexLayout>
+
+
+            <FlexLayout Direction="Row"
+            JustifyContent="SpaceAround"
+            AlignItems="Center"
+            Wrap="Wrap"
+            Margin="0,10,0,0">
+                <!-- View Temperature Trends Button -->
+                <Button Text="View Temperature Trends"
+            Clicked="OnViewTrendsClicked"
+            BackgroundColor="#F4B400"
+            TextColor="White"
+            FontSize="16"
+            CornerRadius="10"
+            HeightRequest="40"
+            WidthRequest="250"
+            Margin="5" />
+
+                <Button Text="View All Reports"
+                Clicked="OnViewAllReportsClicked"
+                BackgroundColor="#34A853"
+                TextColor="White"
+                FontSize="16"
+                CornerRadius="10"
+                HeightRequest="40"
+                WidthRequest="200"
+                Margin="5" />           
+
+                <!-- View Alerts Button -->
+                <Button Text="View Alerts"
+            Clicked="OnViewAlertsClicked"
+            BackgroundColor="#DB4437"
+            TextColor="White"
+            FontSize="16"
+            CornerRadius="10"
+            HeightRequest="40"
+            WidthRequest="250"
+            Margin="5" />
+            </FlexLayout>
+
+
+            <Label Text="Monitor Temperature" 
+               FontSize="22" 
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               TextColor="Black"
+               Margin="20,10,20,5"/>
+
+        <Label x:Name="temperatureLabel" 
+               Text="Temperature: 0 °C" 
+               FontSize="20" 
+               TextColor="Black"
+               HorizontalOptions="Center"/>
+
+       
+        <StackLayout x:Name="StatusStack" HorizontalOptions="Center" VerticalOptions="Center">
+            <Image x:Name="HeaterImage" Source="heaterr.png" WidthRequest="100" HeightRequest="100" IsVisible="False"/>
+            <Label x:Name="heaterLabel" 
+            Text="Heating" 
+            FontSize="20" 
+            TextColor="red"
+            HorizontalOptions="Center"
+                   IsVisible="False"/>
+            
+            <Image x:Name="FanImage" Source="fann.png" WidthRequest="100" HeightRequest="100" IsVisible="False"/>
+            <Label x:Name="fanLabel" 
+            Text="Cooling" 
+            FontSize="20" 
+            TextColor="blue"
+            HorizontalOptions="Center"
+                   IsVisible="False"/>
+            
+            <Image x:Name="OptimalImage" Source="optimal.png" WidthRequest="100" HeightRequest="100" IsVisible="False"/>
+            <Label x:Name="optimalLabel" 
+            Text="Optimal Temperature" 
+            FontSize="20" 
+            TextColor="Green"
+            HorizontalOptions="Center"
+                   IsVisible="False"/>
+        </StackLayout>
+
+        
+        <Button Text="Logout" 
+                Clicked="OnLogoutClicked"
+                BackgroundColor="#DB4437"
+                TextColor="White"
+                FontSize="16"
+                CornerRadius="10"
+                HeightRequest="40"
+                WidthRequest="200"
+                HorizontalOptions="Center"
+                Margin="0,20,0,0"/>
+
+    </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,1 @@
+C:\Users\Terry\Music\SmartTempMonApp\SmartTempMonApp.csproj;x64
